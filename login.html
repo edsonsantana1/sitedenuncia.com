@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Denúncia.com</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script defer src="assets/js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo" style="font-family: 'Lobster', cursive;">Denúncia.com</div>
+            <div class="home"><a href="index.html">Home</a></div>
+            <div class="menu">Menu</div>
+        </div>
+        <div id="menuDropdown" class="menu-dropdown">
+            <button onclick="window.location.href='login.html'">Login</button>
+            <hr>
+           ="window.location.href='perfil.html'">Perfil</button>
+        </div>
+    </header>
+    
+    <main>
+        <h2>Login</h2>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+            
+            <button type="submit">Entrar</button>
+            <hr>
+            <button type="button" onclick="window.location.href='cadastro.html'">Criar Conta</button>
+        </form>
+    </main>
+</body>
+</html>
