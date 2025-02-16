@@ -29,7 +29,12 @@ body {
     background: white;
     padding: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 250px; /* Aumenta a largura da coluna */
+    width: 250px;
+    box-sizing: border-box; /* Adiciona esta linha */
+}
+
+.menu-dropdown.show {
+    display: block;
 }
 
 .menu-dropdown button {
@@ -39,13 +44,15 @@ body {
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 10px; /* Adiciona espaço entre os botões */
+    margin-top: 10px;
+    width: 100%; /* Adiciona esta linha */
+    box-sizing: border-box; /* Adiciona esta linha */
 }
 
 .menu-dropdown hr {
     border: none;
     border-top: 1px solid #ccc;
-    margin: 10px 0; /* Adiciona espaço acima e abaixo da linha */
+    margin: 10px 0;
 }
 
 main {
@@ -58,7 +65,7 @@ main {
 }
 
 textarea, input {
-    width: calc(100% - 20px); /* Ajusta a largura para garantir espaçamento consistente */
+    width: calc(100% - 20px);
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -96,4 +103,47 @@ th, td {
 
 th {
     background-color: #f4f4f4;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .logo {
+        order: 1;
+    }
+
+    .navbar .home {
+        order: 2;
+        margin: 10px 0;
+    }
+
+    .navbar .menu {
+        order: 3;
+    }
+
+    .menu-dropdown {
+        display: none;
+        position: static;
+        width: 100%;
+    }
+
+    main {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    table {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
 }
